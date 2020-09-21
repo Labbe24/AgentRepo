@@ -5,18 +5,12 @@ using System.Text;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using Prism.Commands;
 
 namespace AgentAssignment
 {
-    public class Agent : INotifyPropertyChanged
+    public class Agent
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void Notify([CallerMemberName] string propName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
-        }
-
         string id;
         string codeName;
         string speciality;
@@ -43,7 +37,6 @@ namespace AgentAssignment
             set
             {
                 id = value;
-                Notify();
             }
         }
 
@@ -56,7 +49,6 @@ namespace AgentAssignment
             set
             {
                 codeName = value;
-                Notify();
             }
         }
 
@@ -69,7 +61,6 @@ namespace AgentAssignment
             set
             {
                 speciality = value;
-                Notify();
             }
         }
 
@@ -82,8 +73,8 @@ namespace AgentAssignment
             set
             {
                 assignment = value;
-                Notify();
             }
         }
     }
+
 }

@@ -22,14 +22,11 @@ namespace Agent_2
     /// </summary>
     public partial class MainWindow : Window
     {
-        ObservableCollection<AgentAssignment.Agent> listData = new ObservableCollection<AgentAssignment.Agent>();
+        
         public MainWindow()
         {
             InitializeComponent();
-            listData.Add(new AgentAssignment.Agent("007","James Bond","Assassination","UpperVolta"));
-            listData.Add(new AgentAssignment.Agent("010", "Thomas Gammelby", "Blowjob", "Jens"));
-            listData.Add(new AgentAssignment.Agent("005", "Andreas Støve", "Ganks", "Nexus"));
-            this.DataContext = listData;
+            
         }
     }
 }
